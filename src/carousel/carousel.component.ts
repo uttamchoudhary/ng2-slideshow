@@ -5,7 +5,7 @@ import { Settings } from './model/settings.model';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss']
+  styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
   @Input() IMAGES: Image[];
