@@ -1,6 +1,6 @@
 {
     "name": "ng2-slideshow",
-    "version": "0.0.0",
+    "version": "0.0.2",
     "description": "Create customizable Angular2+ Carousel/Slideshow with your own styles",
     "main": "dist/bundles/carousel.umd.js",
     "module": "dist/index.js",

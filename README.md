@@ -13,7 +13,7 @@ npm install ng2-slideshow
 Import `CarouselModule` into your module
 
 your-module.module.ts
-```
+```ts
 import { CarouselModule } from 'ng2-slideshow';
 
 @NgModule({
@@ -25,7 +25,7 @@ import { CarouselModule } from 'ng2-slideshow';
 Import `Settings` and `Image` interface into your component class for providing settings configuration and list of Images for your carousel.
 
 your-component.component.ts
-```
+```ts
 import { Settings, Image } from 'ng2-slideshow';
 ...
 export class YourComponent {
@@ -35,7 +35,7 @@ export class YourComponent {
 ```
 
 Settings interface
-```
+```ts
 interface Settings { 
     height: String; // Required | Height of carousel in 'px' or percentage.
     width: String; // Required | Width of carousel in 'px' or percentage. 
@@ -48,7 +48,7 @@ interface Settings {
 ```
 
 Image interface
-```
+```ts
 interface Image { 
     caption: String; // Text to display in alt attribute of `img` tag.
     media: String; // Absolute path for your image.
@@ -59,7 +59,7 @@ interface Image {
 It takes two inputs and emits click event to parent component.
 
 Inputs:
-```
+```ts
 images: Image[]; //Required | "Array of images, these images will be displayed in carousel";
 settings: Settings; //Required | "Settings for the Carousel"
 ```
@@ -67,7 +67,7 @@ settings: Settings; //Required | "Settings for the Carousel"
 Now you can use carousel selector in your component template as shown below
 
 your-component.component.html
-```
+```html
 <ng2-slideshow [IMAGES]="images" [SETTINGS]="settings" (onclick)=handler($event)></ng2-slideshow>
 ```
 
@@ -80,7 +80,7 @@ For styling of carousel, SCSS or CSS can be written as global styles for uniform
 **Note**: Please maintain the hierarchy of classes while writing style and don't forget to add `/deep/` before `.carousel-wrapper` in case you are writing styles inside your parent component.
 
 sample.style.scss
-```
+```scss
 .carousel-wrapper {
     ...
     .carousel {
